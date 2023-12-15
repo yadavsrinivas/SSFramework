@@ -8,10 +8,11 @@ import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
 
 public class SSLCheck {
-
-	public static void main(String[] args) {
+ @Test
+	public void SSLChecking() {
 		ChromeOptions options = new ChromeOptions(); 
 		Proxy proxy = new Proxy();
 		proxy.setHttpProxy("ipaddress:4444");
@@ -36,6 +37,7 @@ public class SSLCheck {
 		driver.manage().deleteAllCookies();
 		driver.manage().deleteCookieNamed("sss");
 		//click on any link it will be redirected to login page for login page once delete the cookies were done.
+		driver.close();
 	}
 
 }

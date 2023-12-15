@@ -6,10 +6,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class DynamicCalender {
+	
+	@Test
+	public void DynamicCalendr() {
 
-	public static void main(String[] args) throws InterruptedException {
+	
 		System.setProperty("WebDriver.chrome. driver", "E:/SW Installs/chromedriver-win64/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.path2usa.com/travel-companion/");
@@ -29,8 +33,10 @@ public class DynamicCalender {
 			if (text.equalsIgnoreCase("18")) {
 				driver.findElements(By.className("flatpickr-day")).get(i).click();
 				break;
+				
 			}
 		}
+		driver.close();
 
 	}
 

@@ -8,10 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class DropdownTesting {
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public void DropdownTestng() throws InterruptedException {
+	
 		System.setProperty("WebDriver.chrome. driver", "E:/SW Installs/chromedriver-win64/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.rahulshettyacademy.com/dropdownsPractise/");
@@ -83,6 +86,7 @@ public class DropdownTesting {
 			driver.findElement(By.id("btnclosepaxoption")).click();
 			
 			driver.findElement(By.name("ctl00$mainContent$btn_FindFlights")).click();
+			driver.close();
 	}
 
 }

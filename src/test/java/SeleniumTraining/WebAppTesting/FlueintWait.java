@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import com.google.common.base.Function;
 
@@ -17,7 +18,9 @@ import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
 public class FlueintWait {
 
-	public static void main(String[] args) {
+	@Test
+	public void fluentwait() {
+
 		System.setProperty("WebDriver.chrome. driver", "E:/SW Installs/chromedriver-win64/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -46,7 +49,7 @@ public class FlueintWait {
 		
       
 	System.out.println(driver.findElement(By.xpath("//div[@id='finish']/h4")).getText());
-	
+	driver.close();
 	}
 
 }

@@ -6,10 +6,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class Practicedropdown {
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public void practicedropdown() throws InterruptedException {
 		System.setProperty("WebDriver.chrome. driver", "E:/SW Installs/chromedriver-win64/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		int sum = 0;
@@ -32,6 +34,7 @@ public class Practicedropdown {
 			
 		}
 		System.out.println(driver.findElement(By.xpath("//input[@class='inputs ui-autocomplete-input']")).getAttribute("value"));
+		driver.close();
 	}
 
 }

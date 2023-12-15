@@ -11,12 +11,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class EcommercesiteQA {
-
-	public static void main(String[] args) throws InterruptedException {
+	
+	@Test
+	public void EcomercesiteQA() throws InterruptedException {
+		
 		System.setProperty("WebDriver.chrome. driver", "E:/SW Installs/chromedriver-win64/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
@@ -70,6 +73,7 @@ public class EcommercesiteQA {
 
 				}
 			}
+			driver.close();
 		}
 	}
 

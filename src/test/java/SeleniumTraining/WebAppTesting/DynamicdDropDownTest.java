@@ -8,10 +8,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class DynamicdDropDownTest {
+	
+	@Test
+	public void DynamicDrpdown() throws InterruptedException {
 
-	public static void main(String[] args) throws InterruptedException {
+	
 		System.setProperty("WebDriver.chrome. driver", "E:/SW Installs/chromedriver-win64/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.rahulshettyacademy.com/dropdownsPractise/");
@@ -63,6 +67,8 @@ public class DynamicdDropDownTest {
 		//	driver.findElement(By.cssSelector("#ctl00_mainContent_btn_FindFlights")).click();
 
 		//	driver.findElement(By.xpath("input[id='ctl00_mainContent_btn_FindFlights']")).click();
+			
+			driver.close();
 	}
 
 }

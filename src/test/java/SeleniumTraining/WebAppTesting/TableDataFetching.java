@@ -7,10 +7,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class TableDataFetching {
 
-	public static void main(String[] args) {
+	@Test
+	public void TableDataFetching() {
 		System.setProperty("WebDriver.chrome. driver", "E:/SW Installs/chromedriver-win64/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		int sum = 0;
@@ -38,6 +40,7 @@ public class TableDataFetching {
 
 
 		System.out.println(secondrow.get(2).getText());
+		driver.close();
 		
 	//	List<WebElement> secondrows=table.findElements(By.xpath("//table[@class='table-display']//tr[2]")).size());
 		

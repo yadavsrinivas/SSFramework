@@ -8,10 +8,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class LinksFunctionality {
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public void LinksFunctionality() throws InterruptedException {
 		System.setProperty("WebDriver.chrome. driver", "E:/SW Installs/chromedriver-win64/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
@@ -45,6 +47,7 @@ public class LinksFunctionality {
        
         	}
         	
+        	driver.close();
         }
 
 

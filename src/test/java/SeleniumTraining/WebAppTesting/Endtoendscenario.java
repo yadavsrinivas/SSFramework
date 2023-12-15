@@ -8,12 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class Endtoendscenario {
 	
+	@Test
 	
-
-	public static void main(String[] args) throws InterruptedException {
+	public void EndtoEndScenario() throws InterruptedException {
 
 		System.setProperty("WebDriver.chrome. driver", "E:/SW Installs/chromedriver-win64/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
@@ -96,6 +97,7 @@ public class Endtoendscenario {
 		 */
 
 		// driver.findElement(By.xpath("input[id='ctl00_mainContent_btn_FindFlights']")).click();
+		driver.close();
 		
 	}
 
