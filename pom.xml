@@ -63,6 +63,13 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
+          <!-- configuration? <parallel>methods</parallel> <threadCount>/10<.threadCount>
+          </confogration -->
+          <configuration>
+			  <suiteXmlFiles>
+				  <suiteXmlFile>TestNG.xml</suiteXmlFile>
+			  </suiteXmlFiles>
+		  </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
